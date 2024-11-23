@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        TOKEN: $TOKEN
+        GITHUB_TOKEN: $GITHUB_TOKEN
         GITHUB_USER_NAME: $GITHUB_USER_NAME
         GITHUB_REPOSITORY_NAME: $GITHUB_REPOSITORY_NAME
         RUNNER_GROUP: $RUNNER_GROUP
