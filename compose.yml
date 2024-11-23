@@ -1,0 +1,15 @@
+services:
+  runner:
+    build:
+      context: .
+      args:
+        TOKEN: $TOKEN
+        GITHUB_USER_NAME: $GITHUB_USER_NAME
+        GITHUB_REPOSITORY_NAME: $GITHUB_REPOSITORY_NAME
+        RUNNER_GROUP: $RUNNER_GROUP
+        NAME: $NAME
+    env_file:
+      - .env
+    tty: true
+    command: ./run.sh
+      
