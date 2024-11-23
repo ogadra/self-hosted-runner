@@ -1,3 +1,5 @@
+# actions/runnerの最新バージョンを取得
+
 check() {
   check_rate_limit() {
     if [[ $1 == *"rate limit"* ]]; then

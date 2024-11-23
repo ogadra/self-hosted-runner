@@ -14,7 +14,6 @@ RUN VERSION=$(bash ./check_version.sh) && \
     echo "Build with version $VERSION" && \
     curl -o "actions-runner-linux-x64-$VERSION.tar.gz" -L \
     "https://github.com/actions/runner/releases/download/v$VERSION/actions-runner-linux-x64-$VERSION.tar.gz" && \
-    # tar xzf "./actions-runner-linux-x64-$VERSION.tar.gz"
     tar xzf "./actions-runner-linux-x64-$VERSION.tar.gz" && \
     bash ./bin/installdependencies.sh && \
     rm "./actions-runner-linux-x64-$VERSION.tar.gz" ./bin/installdependencies.sh ./check_version.sh
