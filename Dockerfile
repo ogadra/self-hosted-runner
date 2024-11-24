@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 ENV RUNNER_ALLOW_RUNASROOT=true
 WORKDIR /actions-runner
 
@@ -6,7 +6,7 @@ COPY check_version.sh ./check_version.sh
 COPY get_token.sh ./get_token.sh
 
 RUN apt-get update && \
-    apt-get install -y curl jq && \
+    apt-get install -y curl jq libicu74 libssl-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
